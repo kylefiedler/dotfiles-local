@@ -1,10 +1,17 @@
+" Syntax
+Bundle "othree/html5.vim"
+Bundle "juvenn/mustache.vim"
+Bundle "cakebaker/scss-syntax.vim"
+
+" Other
 Bundle "altercation/vim-colors-solarized"
 Bundle "mattn/emmet-vim"
 Bundle "pbrisbin/vim-rename-file"
 Bundle "scrooloose/nerdtree"
-Bundle "vim-scripts/Auto-Pairs"
 Bundle "vim-scripts/auto_mkdir"
+Bundle "vim-scripts/L9"
+Bundle "othree/vim-autocomplpop"
 
-# Snippets
+" Snippets
 Bundle "SirVer/ultisnips"
 Bundle "kylefiedler/vim-snippets"

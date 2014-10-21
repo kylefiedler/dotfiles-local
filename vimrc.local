@@ -1,21 +1,43 @@
+"Misc
+"""""""""""""""
 " I carnt spelll
 set spell
 
 " Remove commenting on next line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Filetype / Omnicomplete
+"""""""""""""""
+autocmd BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
+autocmd BufNewFile,BufRead *.scss set ft=scss syntax=scss
+autocmd BufNewFile,BufRead *.erb set filetype=html " Set ERB filetype to HTML
+autocmd BufNewFile,BufRead *.hbs set filetype=html " Set ERB filetype to HTML
+
+autocmd FileType html,markdown,erb,hbs setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
 " Looks
+"""""""""""""""
+set linespace=8
+set guifont=Anonymous\ Pro:h18
+set background=light
+:colorscheme solarized
+
 if has('gui_running')
   set t_Co=256
-  set guifont=Anonymous\ Pro:h18
-  set linespace=8
+  set guioptions-=T
+  set guioptions-=m
+  set guioptions-=l
+  set guioptions-=r
+  set guioptions-=R
+  set guioptions-=L
   set guioptions+=c
-  set background=light
-  :colorscheme solarized
 endif
 
 " Mappings
-
+"""""""""""""""
 " Faster new buffers
 map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>s :split <CR> :CtrlP <CR>
@@ -62,13 +84,15 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 map <D-/> :TComment<cr>
 vmap <D-/> :TComment<cr>gv
 
+" Search
+set hlsearch          " Highlight search terms
+set incsearch         " search dynamically as keyword is typed.
 
 " Emmet Expand
 let g:user_emmet_expandabbr_key = '<c-e>'
 
 " Rename
 map <Leader>r :RenameFile<CR>
-
 
 " paste in INSERT mode from Vim's clipboard (unnamed register)
 imap ppp <ESC>pa
