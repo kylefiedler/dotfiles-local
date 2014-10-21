@@ -1,0 +1,39 @@
+# Start Servers
+alias fs="foreman start"
+alias rs="rails s"
+alias js="jekyll serve -w"
+alias ms="middleman server"
+
+# Git Shortcuts
+alias g='git'
+alias ga='git add . && git status'
+alias gaa='git add -A && git status'
+alias gb='git branch'
+alias gco='git checkout'
+alias gcol='git checkout -'
+alias gcom='git checkout master'
+alias gac='git commit -a'
+alias gc='git commit'
+alias gcam='git commit --amend'
+alias gpp="git pull --rebase && git push"
+alias gp="git push"
+alias gd='git diff'
+alias gdt='git difftool'
+alias gdtm='git difftool origin/master'
+alias gf='git fetch'
+alias gpr='git pull --rebase'
+alias gr='git rebase'
+alias grbc='git rebase --continue'
+alias grba='git rebase --abort'
+alias gst='git status'
+alias gsta='git stash'
+alias gstp='git stash pop'
+alias gup='git fetch origin && git rebase origin/master'
+alias gcl='git clean -f -d'
+alias gl='git log'
+alias gcp='git cherry-pick'
+alias gm='git merge --ff-only'
+
+# Other
+alias mkdir='mkdir -p'
+alias .='open .'
