@@ -1,0 +1,80 @@
+" I carnt spelll
+set spell
+
+" Remove commenting on next line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Looks
+if has('gui_running')
+  set t_Co=256
+  set guifont=Anonymous\ Pro:h18
+  set linespace=8
+  set guioptions+=c
+  set background=light
+  :colorscheme solarized
+endif
+
+" Mappings
+
+" Faster new buffers
+map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>s :split <CR> :CtrlP <CR>
+map <leader>S :split <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>v :vsplit <CR> :CtrlP <CR>
+map <leader>V :vsplit <C-R>=expand("%:p:h") . "/" <CR>
+
+" Go back to normal mode with jk OR kj OR jj OR kk
+imap jk <Esc>j
+imap kj <Esc>k
+imap jj <Esc>j
+imap kk <Esc>k
+
+" Saves time
+nmap <return> :
+
+" NERDTree
+nmap <leader>n :NERDTreeToggle<cr>
+
+" CtrlP
+map <leader>g :CtrlP <CR>
+map <D-p> :CtrlP <CR>
+
+" Ag
+map <D-F> :Ag 
+map <leader>a :Ag 
+
+" Sorting
+vmap <leader>1 :!sort<CR>
+map <leader>2 ?{<CR>jV/^\s*\}\=$<CR>k:sort<CR>:let @/=''<CR>
+
+" Indent like textmate
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
+
+" Set ultisnips triggers
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Comment lines with cmd+/
+map <D-/> :TComment<cr>
+vmap <D-/> :TComment<cr>gv
+
+
+" Emmet Expand
+let g:user_emmet_expandabbr_key = '<c-e>'
+
+" Rename
+map <Leader>r :RenameFile<CR>
+
+
+" paste in INSERT mode from Vim's clipboard (unnamed register)
+imap ppp <ESC>pa
+
+" paste in COMMAND mode from Vim's clipboard (unnamed register)
+cmap ppp <C-r>"
+
+" always indent after pasting
+noremap p p=']

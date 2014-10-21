@@ -1,0 +1,10 @@
+Bundle "altercation/vim-colors-solarized"
+Bundle "mattn/emmet-vim"
+Bundle "pbrisbin/vim-rename-file"
+Bundle "scrooloose/nerdtree"
+Bundle "vim-scripts/Auto-Pairs"
+Bundle "vim-scripts/auto_mkdir"
+
+# Snippets
+Bundle "SirVer/ultisnips"
+Bundle "kylefiedler/vim-snippets"
