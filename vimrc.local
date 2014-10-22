@@ -102,3 +102,6 @@ cmap ppp <C-r>"
 
 " always indent after pasting
 noremap p p=']
+
+" Easier Saving
+map <D-s> :w<CR>
