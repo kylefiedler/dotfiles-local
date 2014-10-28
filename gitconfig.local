@@ -7,7 +7,6 @@
   m = merge --ff-only
   aa= !git add -u && git add . && git status
   d = diff
-  pl = pull
   ps = push
   pr = pull --rebase
   st = status
@@ -26,3 +25,7 @@
   rebase = true
 [remote "origin"]
   push = HEAD
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false

@@ -36,6 +36,10 @@ if has('gui_running')
   set guioptions+=c
 endif
 
+" Search
+set hlsearch          " Highlight search terms
+set incsearch         " search dynamically as keyword is typed.
+
 " Mappings
 """""""""""""""
 " Faster new buffers
@@ -59,10 +63,8 @@ nmap <leader>n :NERDTreeToggle<cr>
 
 " CtrlP
 map <leader>g :CtrlP <CR>
-map <D-p> :CtrlP <CR>
 
 " Ag
-map <D-F> :Ag 
 map <leader>a :Ag 
 
 " Sorting
@@ -70,23 +72,15 @@ vmap <leader>1 :!sort<CR>
 map <leader>2 ?{<CR>jV/^\s*\}\=$<CR>k:sort<CR>:let @/=''<CR>
 
 " Indent like textmate
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
+" nmap <C-[> <<
+" nmap <C-]> >>
+" vmap <C-[> <gv
+" vmap <C-]> >gv
 
 " Set ultisnips triggers
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-" Comment lines with cmd+/
-map <D-/> :TComment<cr>
-vmap <D-/> :TComment<cr>gv
-
-" Search
-set hlsearch          " Highlight search terms
-set incsearch         " search dynamically as keyword is typed.
 
 " Emmet Expand
 let g:user_emmet_expandabbr_key = '<c-e>'
@@ -94,14 +88,12 @@ let g:user_emmet_expandabbr_key = '<c-e>'
 " Rename
 map <Leader>r :RenameFile<CR>
 
-" paste in INSERT mode from Vim's clipboard (unnamed register)
-imap ppp <ESC>pa
-
-" paste in COMMAND mode from Vim's clipboard (unnamed register)
-cmap ppp <C-r>"
-
 " always indent after pasting
 noremap p p=']
 
 " Easier Saving
-map <D-s> :w<CR>
+map <leader>w :w<CR>
+
+" Easier Closing
+map <leader>x :x<CR>
+map <leader>q :q<CR>

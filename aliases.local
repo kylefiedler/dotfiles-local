@@ -37,3 +37,5 @@ alias gm="git merge --ff-only"
 # Other
 alias mkdir="mkdir -p"
 alias .="open ."
+alias mvim="vim"
+alias dotfiles="cd ~/dotfiles-local/"
