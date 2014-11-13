@@ -12,6 +12,8 @@ Bundle "vim-scripts/auto_mkdir"
 Bundle "vim-scripts/L9"
 Bundle "othree/vim-autocomplpop"
 Bundle "rking/ag.vim"
+Bundle "jiangmiao/auto-pairs"
+Bundle "tpope/vim-unimpaired"
 
 " Snippets
 Bundle "SirVer/ultisnips"

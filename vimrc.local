@@ -71,12 +71,6 @@ map <leader>a :Ag
 vmap <leader>1 :!sort<CR>
 map <leader>2 ?{<CR>jV/^\s*\}\=$<CR>k:sort<CR>:let @/=''<CR>
 
-" Indent like textmate
-" nmap <C-[> <<
-" nmap <C-]> >>
-" vmap <C-[> <gv
-" vmap <C-]> >gv
-
 " Set ultisnips triggers
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -88,12 +82,37 @@ let g:user_emmet_expandabbr_key = '<c-e>'
 " Rename
 map <Leader>r :RenameFile<CR>
 
+" Save
+map <Leader>w :w<CR>
+
+" Save and Quit
+map <Leader>x :x<CR>
+
+" Quit
+map <Leader>q :q<CR>
+
 " always indent after pasting
 noremap p p=']
 
-" Easier Saving
-map <leader>w :w<CR>
+" To open a new empty buffer
+" This replaces :tabnew which I used to bind to this mapping
+" nmap <leader>T :enew<cr>
 
-" Easier Closing
-map <leader>x :x<CR>
-map <leader>q :q<CR>
+" Move to the next buffer
+nmap <leader>bn :bnext<CR>
+
+" Move to the previous buffer
+nmap <leader>bp :bprevious<CR>
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>bq :bp <BAR> bd #<CR>
+
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
+
+" resize current buffer by +/- 5 
+nnoremap <C-left> :vertical resize -5<cr>
+nnoremap <C-down> :resize +5<cr>
+nnoremap <C-up> :resize -5<cr>
+nnoremap <C-right> :vertical resize +5<cr>
