@@ -39,6 +39,7 @@ endif
 " Search
 set hlsearch          " Highlight search terms
 set incsearch         " search dynamically as keyword is typed.
+set smartcase
 
 " Mappings
 """""""""""""""
