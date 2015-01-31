@@ -14,6 +14,8 @@ Bundle "othree/vim-autocomplpop"
 Bundle "rking/ag.vim"
 Bundle "jiangmiao/auto-pairs"
 Bundle "tpope/vim-unimpaired"
+Bundle "terryma/vim-multiple-cursors"
+Bundle "yegappan/greplace"
 
 " Snippets
 Bundle "SirVer/ultisnips"
