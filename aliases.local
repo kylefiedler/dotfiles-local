@@ -4,6 +4,11 @@ alias rs="rails s"
 alias js="jekyll serve -w"
 alias ms="middleman server"
 
+# Bundle
+alias b="bundle"
+alias be="bundle exec"
+alias ber="bundle exec rake"
+
 # Git Shortcuts
 alias g="git"
 alias ga="git add . && git status"
@@ -37,7 +42,5 @@ alias gm="git merge --ff-only"
 # Other
 alias mkdir="mkdir -p"
 alias .="open ."
-alias mvim="vim"
 alias dotfiles="cd ~/dotfiles-local/"
 alias ia="open -a 'iA Writer'"
-alias mou="open -a 'Mou'"
