@@ -3,6 +3,7 @@ alias fs="foreman start"
 alias rs="rails s"
 alias js="jekyll serve -w"
 alias ms="middleman server"
+alias setup="./bin/setup"
 
 # Bundle
 alias b="bundle"
@@ -44,3 +45,4 @@ alias mkdir="mkdir -p"
 alias .="open ."
 alias dotfiles="cd ~/dotfiles-local/"
 alias ia="open -a 'iA Writer'"
+alias nombom="rm -rf bower_components node_modules"
