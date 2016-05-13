@@ -2,8 +2,10 @@
 alias fs="foreman start"
 alias rs="rails s"
 alias js="jekyll serve -w"
+alias bejs="bundle exec jekyll serve -w"
 alias ms="middleman server"
 alias setup="./bin/setup"
+alias migrate="bundle && migrate"
 
 # Bundle
 alias b="bundle"
