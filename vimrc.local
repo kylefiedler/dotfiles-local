@@ -21,13 +21,13 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 " Looks
 """""""""""""""
 set t_Co=256
-set background=light
-:colorscheme solarized
+set background=dark
+set linespace=8
+let base16colorspace=256
 
 if has('gui_running')
-  :colorscheme solarized
+  :colorscheme base16-ocean
   set guifont=Anonymous\ Pro:h18
-  set linespace=8
   set guioptions-=T
   set guioptions-=m
   set guioptions-=l
@@ -66,6 +66,7 @@ nmap <leader>n :NERDTreeToggle<cr>
 
 " CtrlP
 map <leader>g :CtrlP <CR>
+let g:ctrlp_map = '<c-p>'
 
 " Ag
 map <leader>a :Ag 
@@ -79,7 +80,7 @@ map <leader>2 ?{<CR>jV/^\s*\}\=$<CR>k:sort<CR>:let @/=''<CR>
 
 " Set ultisnips triggers
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Emmet Expand
@@ -115,9 +116,7 @@ nmap <leader>bp :bprevious<CR>
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
 nmap <leader>bq :bp <BAR> bd #<CR>
-
-" Show all open buffers and their status
-nmap <leader>bl :ls<CR>
+" Show all open buffers and their status nmap <leader>bl :ls<CR>
 
 " resize current buffer by +/- 5 
 nnoremap <C-left> :vertical resize -5<cr>

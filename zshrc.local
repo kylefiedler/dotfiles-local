@@ -1,6 +1,10 @@
 PATH="$PATH:/usr/local/lib/node_modules"
 source $(brew --prefix nvm)/nvm.sh
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.light.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 # eval"$(rbenv init - --no-rehash zsh)"
 
 # export PATH="$HOME/.bin:$PATH"
