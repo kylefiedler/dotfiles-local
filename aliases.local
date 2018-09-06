@@ -44,7 +44,6 @@ alias gm="git merge --ff-only"
 
 # Other
 alias mkdir="mkdir -p"
-alias .="open ."
 alias dotfiles="cd ~/dotfiles-local/"
 alias ia="open -a 'iA Writer'"
 alias nombom="rm -rf bower_components node_modules"
