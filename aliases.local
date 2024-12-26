@@ -1,16 +1,6 @@
 # Start Servers
-alias fs="foreman start"
-alias rs="rails s"
-alias js="jekyll serve -w"
-alias bejs="bundle exec jekyll serve -w"
-alias ms="middleman server"
-alias setup="./bin/setup"
-alias migrate="bundle && migrate"
-
-# Bundle
-alias b="bundle"
-alias be="bundle exec"
-alias ber="bundle exec rake"
+alias js="jekyll serve -w --incremental"
+alias bejs="bundle exec jekyll serve -w --incremental"
 
 # Git Shortcuts
 alias g="git"
@@ -46,4 +36,3 @@ alias gm="git merge --ff-only"
 alias mkdir="mkdir -p"
 alias dotfiles="cd ~/dotfiles-local/"
 alias ia="open -a 'iA Writer'"
-alias nombom="rm -rf bower_components node_modules"
